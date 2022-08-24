@@ -23,13 +23,7 @@ namespace homework {
 		std::string const getName();
 		int const getCost();
 		int const getVolume();
-		/// 
+		/// оепецпсфеммше ноепюрнпш
 		friend std::ostream& operator<<(std::ostream&, const Drink&);
-		
-
-		/// 
-		/// 
-		/// 
-		///
 	};
 }

@@ -4,36 +4,36 @@ namespace homework {
 	class DrinkSlot
 	{
 	private:
-		Drink* drinks = nullptr;
-		int amount = 10;
-		int count = 0;
-		int number = 0;
+		Drink* drinks = nullptr; //Для создания слота, который, по сути, будет динмаческим массивом напитков
+		int amount = 10; //Общее доступное количество напитков в слоте
+		int count = 0; // Актуальное количество напитков в слоте
+		int number = 0; //Порядковый номер слота
 	public:
 		///КОНСТРУКТОРЫ
 		DrinkSlot();
 		DrinkSlot(int);
 		DrinkSlot(int, std::string name, int cost, int volume);
 		DrinkSlot(DrinkSlot& other);
-		///КОНСТРУКТОРЫ
+		///ДЕСТРУКТОРЫ
 		~DrinkSlot();
-		///КОНСТРУКТОРЫ
-		int getAmount();
-		int getCount();
-		int getNumber();
-		Drink& getDrink();
-		std::string getDrinkName();
-		int getCost();
-		int getVolume();
-		///КОНСТРУКТОРЫ
+		///ГЕТТЕРЫ
+		int const getAmount();
+		int const getCount();
+		int const getNumber();
+		Drink& const getDrink();
+		std::string const getDrinkName();
+		int const getCost();
+		int const getVolume();
+		///СЕТТЕРЫ
 		void setNumber(int n);
 		void setAmount(int);
 		void setCount(int count);
-		///КОНСТРУКТОРЫ
+		///ФУНКЦИИ-ЧЛЕНЫ
 		void printInfo();
 		void addDrink(Drink drink);
 		Drink& giveDrink();
 		void fillSlot(Drink drink);
-
+		//ПЕРЕГРУЖЕННЫЕ ОПЕРАТОРЫ
 		DrinkSlot& operator--();
 		DrinkSlot& operator++();
 		Drink& operator[](int index);
